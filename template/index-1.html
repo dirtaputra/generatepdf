@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			background: rgb(204, 204, 204);
+		}
+
+		page {
+			background: white;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 0.5cm;
+			box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+		}
+
+		/* page[size="A4"] {
+			width: 21cm;
+			height: 29.7cm;
+		} */
+
+		@media print {
+
+			body,
+			page {
+				margin: 0;
+				box-shadow: 0;
+			}
+		}
+
+		.container {
+			padding: 30px;
+			height: 95%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#logo {
+			position: absolute;
+			width: 631px;
+			height: 631px;
+			left: 50%;
+			top: -155px;
+
+			background: url(image.png);
+			opacity: 0.05;
+		}
+
+		.doc-head {
+			font-family: Lato;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 26px;
+			line-height: 36px;
+
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.25px;
+
+			color: #333333;
+		}
+
+		.doc-subhead {
+			font-family: Lato;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 22px;
+
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.3px;
+			margin-bottom: 20px;
+
+			color: #8692A6;
+		}
+
+		.pic {
+			width: 114px;
+			height: 114px;
+			top: 114px;
+
+			border-radius: 5px;
+		}
+
+		.info-label {
+			font-family: Lato;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 30px;
+
+			letter-spacing: 0.3px;
+
+			color: #202945;
+		}
+
+		.info-content {
+			font-family: Lato;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 30px;
+
+			text-align: right;
+			letter-spacing: 0.3px;
+
+			color: #202945;
+		}
+
+		.table-container {
+			border: 1px solid #EDEDED;
+			box-sizing: border-box;
+			border-radius: 10px;
+		}
+
+		.row {
+			margin-bottom: 15px;
+		}
+
+		.column {
+			float: left;
+		}
+
+		.left {
+			width: 23%;
+		}
+
+		.middle {
+			width: 25%;
+		}
+
+		.right {
+			width: 50%;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			border-radius: 10px 10px 0px 0px;
+		}
+
+		th {
+			background: rgba(239, 239, 247, 0.7);
+
+			text-align: left;
+			padding: 8px;
+
+			font-family: Lato;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 22px;
+
+			letter-spacing: 0.3px;
+
+			color: #333333;
+		}
+
+		td {
+			text-align: left;
+			padding: 8px;
+
+			font-family: Lato;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 22px;
+
+			letter-spacing: 0.3px;
+
+			color: #333333;
+		}
+
+		td:nth-child(1) {
+			width: 5%;
+		}
+
+		tr:nth-child(even) {
+			background: #F9FAFE;
+		}
+
+		.footer {
+			position: absolute;
+			bottom: 0;
+			width: calc(100% - 60px);
+
+			font-family: Lato;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 22px;
+
+			letter-spacing: 0.3px;
+
+			color: #333333;
+		}
+
+		.footer-row {
+			position: relative;
+		}
+
+		.footer-left {
+			position: absolute;
+			bottom: 0;
+		}
+
+		.footer-right {
+			float: right;
+		}
+
+		.qr-code {
+			width: 108px;
+			height: 110px;
+			border-radius: 5px;
+			border: 10px solid #EDEDED;
+		}
+
+		.footer-row:after {
+			content: "";
+			display: table;
+			clear: both;
+			margin-bottom: 30px;
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<page size="A4">
+		<div class="container">
+			<img src="./logo-bib.svg" alt="logo bib" id="logo">
+			<div class="doc-head">Training Document</div>
+			<div class="doc-subhead">PT. BORNEO INDOBARA</div>
+			<div class="row">
+				<div class="column left">
+					<img src="https://www.w3schools.com/images/picture.jpg" alt="employee picture" class="pic">
+				</div>
+				<div class="column middle info-label">
+					<div>Nama</div>
+					<div>NIK</div>
+					<div>Perusahaan</div>
+					<div>Department</div>
+				</div>
+				<div class="column right info-content">
+					<div>Primadi Anindito</div>
+					<div>Lorem Ipsum</div>
+					<div>Lorem Ipsum</div>
+					<div>Lorem Ipsum</div>
+				</div>
+			</div>
+			<div class="table-container">
+				<table>
+					<tr>
+						<th>No</th>
+						<th>Jenis Training</th>
+						<th>Tanggal Training</th>
+						<th>Berlaku Sampai</th>
+						<th>Penyelenggara</th>
+					</tr>
+					{{#each products.prodlist}}
+					<tr>
+						<td>{{this.no}}</td>
+						<td>{{this.jenis_training}}</td>
+						<td>{{this.tanggal_training}}</td>
+						<td>{{this.berlaku_sampai}}</td>
+						<td>{{this.penyelenggara}}</td>
+					</tr>
+					{{/each}}
+				</table>
+			</div>
+			<div class="footer">
+				<div class="footer-row">
+					<div class="footer-left">
+						Training ini telah divalidasi secara digital oleh PT. Borneo Indobara
+					</div>
+					<div class="footer-right">
+						<img src="https://qrcode.tec-it.com/API/QRCode?data=QR+Code+Generator+by+TEC-IT&method=download"
+							alt="qr code" class="qr-code">
+					</div>
+				</div>
+			</div>
+		</div>
+	</page>
+</body>
+
+</html>
