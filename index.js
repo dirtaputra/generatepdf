@@ -84,4 +84,5 @@ app.get("/download", function(req, res) {
   return true;
 });
 
+app.use(express.static("template"));
 app.listen(process.env.PORT || 8080);

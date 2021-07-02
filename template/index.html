@@ -3,8 +3,10 @@
 
 <head>
 	<style>
+		html,
 		body {
-			background: white;
+			background: rgb(204, 204, 204);
+			height: 100%;
 		}
 
 		page {
@@ -12,35 +14,28 @@
 			display: block;
 			margin: 0 auto;
 			margin-bottom: 0.5cm;
-			box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+			/* box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5); */
+
+			height: 100%;
 		}
 
-		/* body[size="A4"] {
+		/* page[size="A4"] {
 			width: 21cm;
 			height: 29.7cm;
 		} */
 
 		@media print {
 
-			html,
-			page {
-				width: 210mm;
-				height: 297mm;
-			}
-		}
-
-		/* @media print {
-
 			body,
 			page {
 				margin: 0;
 				box-shadow: 0;
 			}
-		} */
+		}
 
 		.container {
 			padding: 30px;
-			height: 95%;
+			height: calc(100% - 60px);
 			position: relative;
 			overflow: hidden;
 		}
@@ -52,7 +47,7 @@
 			left: 50%;
 			top: -155px;
 
-			background: url(image.png);
+			/* background: url(image.png); */
 			opacity: 0.05;
 		}
 
@@ -97,7 +92,7 @@
 			font-family: Lato;
 			font-style: normal;
 			font-weight: bold;
-			font-size: 10px;
+			font-size: 14px;
 			line-height: 30px;
 
 			letter-spacing: 0.3px;
@@ -109,7 +104,7 @@
 			font-family: Lato;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 10px;
+			font-size: 12px;
 			line-height: 30px;
 
 			text-align: right;
@@ -132,12 +127,12 @@
 			float: left;
 		}
 
-		.left {
-			width: 18%;
+		.edge {
+			width: 23%;
 		}
 
 		.middle {
-			width: 35%;
+			width: 25%;
 		}
 
 		.right {
@@ -165,7 +160,7 @@
 			font-family: Lato;
 			font-style: normal;
 			font-weight: bold;
-			font-size: 10px;
+			font-size: 12px;
 			line-height: 22px;
 
 			letter-spacing: 0.3px;
@@ -180,7 +175,7 @@
 			font-family: Lato;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 10px;
+			font-size: 12px;
 			line-height: 22px;
 
 			letter-spacing: 0.3px;
@@ -204,7 +199,7 @@
 			font-family: Lato;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 10px;
+			font-size: 12px;
 			line-height: 22px;
 
 			letter-spacing: 0.3px;
@@ -226,10 +221,11 @@
 		}
 
 		.qr-code {
-			width: 108px;
-			height: 110px;
+			width: 95px;
+			height: 95px;
 			border-radius: 5px;
 			border: 10px solid #EDEDED;
+			margin-left: 20%;
 		}
 
 		.footer-row:after {
@@ -245,10 +241,11 @@
 <body>
 	<page size="A4">
 		<div class="container">
+			<!-- <img src="./logo-bib.jpeg" alt="logo bib" id="logo"> -->
 			<div class="doc-head">Training Document</div>
 			<div class="doc-subhead">PT. BORNEO INDOBARA</div>
 			<div class="row">
-				<div class="column left">
+				<div class="column edge">
 					<img src="https://www.w3schools.com/images/picture.jpg" alt="employee picture" class="pic">
 				</div>
 				<div class="column middle info-label">
@@ -257,11 +254,15 @@
 					<div>Perusahaan</div>
 					<div>Department</div>
 				</div>
-				<div class="column right info-content">
+				<div class="column middle info-content">
 					<div>Primadi Anindito</div>
 					<div>Lorem Ipsum</div>
 					<div>Lorem Ipsum</div>
 					<div>Lorem Ipsum</div>
+				</div>
+				<div class="column edge">
+					<img src="https://qrcode.tec-it.com/API/QRCode?data=QR+Code+Generator+by+TEC-IT&method=download"
+						alt="qr code" class="qr-code">
 				</div>
 			</div>
 			<div class="table-container">
@@ -289,10 +290,10 @@
 					<div class="footer-left">
 						Training ini telah divalidasi secara digital oleh PT. Borneo Indobara
 					</div>
-					<div class="footer-right">
+					<!-- <div class="footer-right">
 						<img src="https://qrcode.tec-it.com/API/QRCode?data=QR+Code+Generator+by+TEC-IT&method=download"
 							alt="qr code" class="qr-code">
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
